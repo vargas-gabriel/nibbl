@@ -20,6 +20,8 @@ import LandingPage from "../LandingPage/LandingPage";
 import LoginPage from "../LoginPage/LoginPage";
 import RegisterPage from "../RegisterPage/RegisterPage";
 import MealInfoPage from "../MealInfoPage/MealInfoPage";
+import SavedMealsPage from "../SavedMealsPage/SavedMealsPage";
+import CreateMealPage from "../CreateMealPage/CreateMealPage";
 
 import "./App.css";
 

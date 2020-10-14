@@ -27,6 +27,8 @@ class InfoPage extends React.Component {
 				<div>Breakfast</div>
 				<div>Lunch</div>
 				<div>Dinner</div>
+				<button>Save Meal</button>
+				<button>Back to Home</button>
 			</div>
 		);
 	}

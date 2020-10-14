@@ -8,7 +8,7 @@ class MealInfoPage extends Component {
 	render() {
 		return (
 			<div>
-				<p>meal placeholder</p>
+				<p>Meal</p>
 				<ul>
 					<li>meal name</li>
 					<li>youtube link</li>

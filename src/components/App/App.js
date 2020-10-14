@@ -64,6 +64,24 @@ class App extends Component {
 							path='/info'
 							component={InfoPage}
 						/>
+						<ProtectedRoute
+							// logged in shows CreateMeal else shows LoginPage
+							exact
+							path='/create'
+							component={CreateMealPage}
+						/>
+						<ProtectedRoute
+							// logged in shows SavedMeals else shows LoginPage
+							exact
+							path='/saved'
+							component={SavedMealsPage}
+						/>
+						<ProtectedRoute
+							// logged in shows MealInfo else shows LoginPage
+							exact
+							path='/mealinfo'
+							component={MealInfoPage}
+						/>
 
 						{/* When a value is supplied for the authRedirect prop the user will
             be redirected to the path supplied when logged in, otherwise they will

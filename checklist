@@ -21,14 +21,28 @@ Morning to do:
 
 After Lunch till 5:
 
+Base mode:
+
 [] database set up
-    []user table 
-    []users_meals
+    [x]user table 
+    -commit
+    [x]users_meals
+    -commit
     []meals 
+    -commit
         populate with meals
+        -commit
     []diets
+    -commit
         populate with diets
+        -commit
     []meals_diets
+    -commit
+
+Stretch goals:
+
 []table joins
     []user and meals table 
+    -commit
     []meals and diets table 
+    -commit

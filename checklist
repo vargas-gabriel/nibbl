@@ -28,7 +28,7 @@ Base mode:
     -commit
     [x]users_meals
     -commit
-    []meals 
+    [x]meals 
     -commit
         []populate with meals
         -commit

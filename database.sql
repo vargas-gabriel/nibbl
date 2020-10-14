@@ -20,3 +20,17 @@ CREATE TABLE "diets" (
 );
 INSERT INTO "diets" ("name")
 VALUES ('Ketogenic'), ('Vegan'), ('Vegetarian'), ('Paleo');
+
+CREATE TABLE "user_meals" (
+	"id" SERIAL PRIMARY KEY,
+    "USER_ID" INT REFERENCES "user",
+    "MEAL_ID" INT REFERENCES "meals"
+);
+
+CREATE TABLE "meals" (
+    "id" SERIAL PRIMARY KEY,
+    "mealName" VARCHAR (80) NOT NULL,
+    "calories" VARCHAR (1000) NOT NULL,
+    "youtube" VARCHAR (2000) NOT NULL
+);
+

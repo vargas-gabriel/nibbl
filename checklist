@@ -12,6 +12,23 @@ checklist for 10/13
 
 checklist 10/14
 
+Morning to do:
 []buttons
-[] clickable divs for homepage 
+    [x]results page
+    [x]meal info page 
+    [x]create meal page 
+[x] clickable divs for homepage 
+
+After Lunch till 5:
+
 [] database set up
+    []user table 
+    []users_meals
+    []meals 
+        populate with meals
+    []diets
+        populate with diets
+    []meals_diets
+[]table joins
+    []user and meals table 
+    []meals and diets table 

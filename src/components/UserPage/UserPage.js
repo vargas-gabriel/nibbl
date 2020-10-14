@@ -1,41 +1,65 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import LogOutButton from "../LogOutButton/LogOutButton";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 
 class UserPage extends Component {
 	state = {
 		hour: null,
+		greeting: "",
 	};
 	componentDidMount() {
-		this.getHour();
+		this.getGreeting();
 	}
-	getHour = () => {
+
+	getGreeting = () => {
 		const date = new Date();
 		const hour = date.getHours();
 		this.setState({
 			hour,
 		});
+		if (hour >= 0 && hour <= 11) {
+			this.setState({
+				greeting: `Good morning`,
+			});
+		} else if (hour >= 12 && hour <= 17) {
+			this.setState({
+				greeting: `Good afternoon`,
+			});
+		} else {
+			this.setState({
+				greeting: `Good evening`,
+			});
+		}
 	};
-
+	mealGenKeto = () => {
+		console.log("clicked Keto");
+		this.props.history.push("/info");
+	};
+	mealGenPaleo = () => {
+		console.log("clicked Paleo");
+		this.props.history.push("/info");
+	};
+	mealGenVegan = () => {
+		console.log("clicked Vegan");
+		this.props.history.push("/info");
+	};
+	mealGenVege = () => {
+		console.log("clicked Vegetarian");
+		this.props.history.push("/info");
+	};
 	render() {
-		const { hour } = this.state;
-		console.log(this.state.hour);
 		return (
 			<div>
 				<h1 id='welcome'>
-					{hour < 12
-						? `Good Morning, ${this.props.store.user.username}`
-						: `Good Evening, ${this.props.store.user.username}`}
+					{" "}
+					{this.state.greeting}, {this.props.store.user.username}
 				</h1>
-				{/* <p>Your ID is: {this.props.store.user.id}</p> */}
-				{/* <LogOutButton className="log-in" /> */}
 
 				<p>To begin, select a diet from the list:</p>
-				<div>Ketogenic</div>
-				<div>Paleo</div>
-				<div>Vegan</div>
-				<div>Vegetarian</div>
+				<div onClick={this.mealGenKeto}>Ketogenic</div>
+				<div onClick={this.mealGenPaleo}>Paleo</div>
+				<div onClick={this.mealGenVegan}>Vegan</div>
+				<div onClick={this.mealGenVege}>Vegetarian</div>
 			</div>
 		);
 	}

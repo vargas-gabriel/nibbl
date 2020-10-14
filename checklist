@@ -30,11 +30,11 @@ Base mode:
     -commit
     []meals 
     -commit
-        populate with meals
+        []populate with meals
         -commit
-    []diets
+    [x]diets
     -commit
-        populate with diets
+        [x]populate with diets
         -commit
     []meals_diets
     -commit

@@ -50,3 +50,23 @@ INSERT INTO "meals" ("mealName", "calories", "youtube", "type", "time")
 VALUES ('Keto Lunch', '600', 'youtube.com', 1, 2), ('Keto Dinner', '800', 'youtube', 1, 3), ('Vegan Breakfast', '500', 'youtube', 2, 1), ('Vegan Lunch', '430', 'youtube', 2, 2), 
 ('Vegan Dinner', '650', 'youtube', 2, 3), ('Vegetarian Breakfast', '690', 'youtube', 3, 1), ('Vegetarian Lunch', '680', 'youtube', 3, 2), ('Vegetarian Dinner', '750', 'youtube', 3, 3),
 ('Paleo BreakFast', '550', 'youtube', 4, 1), ('Paleo Lunch', '575', 'youtube', 4, 2), ('Paleo Dinner', '550', 'youtube', 4, 3);
+
+
+SELECT * FROM movies JOIN movies_genres ON movies.id
+ = movies_genres.movies_id JOIN genres ON
+  movies_genres.genres_id = genres.id WHERE movies.id = $1;";
+
+
+SELECT * FROM "species" JOIN "junction" ON "species"."id" = "junction"."species_id" 
+JOIN "class" ON "junction"."class_id" = "class"."id";
+INSERT INTO "junction" ("species_id", "class_id")
+VALUES (1, 4), (2, 4), (3, 5), (4, 5), (5, 5), (6, 3), (7, 2), 
+(8, 2), (9, 2), (10, 2), (11, 2), (12, 2), (13, 1), (14, 1), (15, 1), 
+(16, 1), (17, 1), (18, 1), (19, 1), (20, 1);
+
+SELECT * FROM "meals" JOIN "meals_diets" ON "meals"."id" = "meals_diets"."MEAL_ID" 
+JOIN "diets" ON "meals_diets"."DIET_ID" = "diets"."id";
+
+INSERT INTO "meals_diets" ("MEAL_ID", "DIET_ID", "TIME_ID")
+VALUES (10,4,1), (11,4,2), (12,4,3);
+

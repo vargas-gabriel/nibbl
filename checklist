@@ -62,17 +62,19 @@ Base mode
 
 Morning: 
 []table joins
-[]Spend an hour mapping it out and thinking it through
-    []meals/junction/diets
+[x]Spend an hour mapping it out and thinking it through
+    [x]meals/junction/diets
     -commit
-    []meals/junction/user
+    [x]meals/junction/user
     -commit
 Afternoon: 
 []get routes
     []results page
+    []meal info page 
     []saved meals page
 []post routes
     []create meals page
+    []saved meals page 
 Stretch goals:
 
 []put route

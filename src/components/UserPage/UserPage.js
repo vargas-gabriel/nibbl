@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
-import InfoPage from "../InfoPage/InfoPage";
+import KetoInfoPage from "../KetoInfoPage/KetoInfoPage";
 
 class UserPage extends Component {
 	state = {
@@ -36,7 +36,7 @@ class UserPage extends Component {
 	mealGenKeto = () => {
 		console.log("clicked Keto");
 		// this.props.dispatch({ type: "FETCH_MEALS" });
-		this.props.history.push("/info");
+		this.props.history.push("/ketinfo");
 	};
 	mealGenPaleo = () => {
 		console.log("clicked Paleo");

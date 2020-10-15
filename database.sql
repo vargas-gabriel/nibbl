@@ -20,12 +20,6 @@ CREATE TABLE "diets" (
 INSERT INTO "diets" ("name")
 VALUES ('Ketogenic'), ('Vegan'), ('Vegetarian'), ('Paleo');
 
---user meals junction table 
-CREATE TABLE "user_meals" (
-	"id" SERIAL PRIMARY KEY,
-    "USER_ID" INT REFERENCES "user",
-    "MEAL_ID" INT REFERENCES "meals"
-);
 --meals table 
 CREATE TABLE "meals" (
     "id" SERIAL PRIMARY KEY,
@@ -35,6 +29,15 @@ CREATE TABLE "meals" (
     "type" INT NOT NULL,
     "time" INT NOT NULL
 );
+
+
+--user meals junction table 
+CREATE TABLE "user_meals" (
+	"id" SERIAL PRIMARY KEY,
+    "USER_ID" INT REFERENCES "user",
+    "MEAL_ID" INT REFERENCES "meals"
+);
+
 --juction for meals and diets tables
 CREATE TABLE "meals_diets" (
 	"id" SERIAL PRIMARY KEY,

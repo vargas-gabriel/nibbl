@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import errors from "./errors.reducer";
 import user from "./user.reducer";
-import meal from "./meal.reducer";
+import keto from "./keto.reducer";
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -12,7 +12,7 @@ import meal from "./meal.reducer";
 const rootReducer = combineReducers({
 	errors, // contains registrationMessage and loginMessage
 	user, // will have an id and username if someone is logged in
-	meal,
+	keto,
 });
 
 export default rootReducer;

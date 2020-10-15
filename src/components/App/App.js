@@ -15,11 +15,10 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 import AboutPage from "../AboutPage/AboutPage";
 import UserPage from "../UserPage/UserPage";
-import InfoPage from "../InfoPage/InfoPage";
+import KetoInfoPage from "../KetoInfoPage/KetoInfoPage";
 import LandingPage from "../LandingPage/LandingPage";
 import LoginPage from "../LoginPage/LoginPage";
 import RegisterPage from "../RegisterPage/RegisterPage";
-import MealInfoPage from "../MealInfoPage/MealInfoPage";
 import SavedMealsPage from "../SavedMealsPage/SavedMealsPage";
 import CreateMealPage from "../CreateMealPage/CreateMealPage";
 
@@ -61,8 +60,8 @@ class App extends Component {
 						<ProtectedRoute
 							// logged in shows InfoPage else shows LoginPage
 							exact
-							path='/info'
-							component={InfoPage}
+							path='/ketinfo'
+							component={KetoInfoPage}
 						/>
 						<ProtectedRoute
 							// logged in shows CreateMeal else shows LoginPage
@@ -75,12 +74,6 @@ class App extends Component {
 							exact
 							path='/saved'
 							component={SavedMealsPage}
-						/>
-						<ProtectedRoute
-							// logged in shows MealInfo else shows LoginPage
-							exact
-							path='/mealinfo'
-							component={MealInfoPage}
 						/>
 
 						{/* When a value is supplied for the authRedirect prop the user will

@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
 
-const mealReducer = (state = [], action) => {
+const ketoReducer = (state = [], action) => {
 	switch (action.type) {
-		case "SET_MEALS":
+		case "SET_KMEALS":
 			return action.payload;
 		default:
 			return state;
 	}
 };
 
-export default mealReducer;
+export default ketoReducer;

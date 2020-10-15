@@ -32,17 +32,48 @@ Base mode:
     -commit
         []populate with meals
         -commit
+
     [x]diets
     -commit
         [x]populate with diets
         -commit
-    []meals_diets
+            []Find Paleo meals
+                breakfast
+                lunch 
+                dinner
+            []Find keto meals
+                breakfast
+                Keto Breakfast Casserole/https://www.youtube.com/watch?v=1Aydu2xmue8&ab_channel=LowCarbRecipeswithJennifer
+                lunch 
+                dinner
+            []Find vegan meals
+                breakfast
+                lunch 
+                dinner
+            []Find vegetarian meals
+                breakfast
+                lunch 
+                dinner
+    [x]meals_diets
     -commit
 
+checklist 10/15
+Base mode
+
+Morning: 
+[]table joins
+[]Spend an hour mapping it out and thinking it through
+    []meals/junction/diets
+    -commit
+    []meals/junction/user
+    -commit
+Afternoon: 
+[]get routes
+    []results page
+    []saved meals page
+[]post routes
+    []create meals page
 Stretch goals:
 
-[]table joins
-    []user and meals table 
-    -commit
-    []meals and diets table 
-    -commit
+[]put route
+    []edit meal on saved meals page

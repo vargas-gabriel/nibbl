@@ -61,7 +61,7 @@ checklist 10/15
 Base mode
 
 Morning: 
-[]table joins
+[x]table joins
 [x]Spend an hour mapping it out and thinking it through
     [x]meals/junction/diets
     -commit
@@ -69,7 +69,7 @@ Morning:
     -commit
 Afternoon: 
 []get routes
-    []results page
+    [x]results page
     []meal info page 
     []saved meals page
 []post routes

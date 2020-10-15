@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import mapStoreToProps from "../../redux/mapStoreToProps";
+import { withRouter } from "react-router-dom";
+import InfoPage from "../InfoPage/InfoPage";
 
 class UserPage extends Component {
 	state = {
@@ -33,6 +35,7 @@ class UserPage extends Component {
 	};
 	mealGenKeto = () => {
 		console.log("clicked Keto");
+		// this.props.dispatch({ type: "FETCH_MEALS" });
 		this.props.history.push("/info");
 	};
 	mealGenPaleo = () => {
@@ -56,7 +59,14 @@ class UserPage extends Component {
 				</h1>
 
 				<p>To begin, select a diet from the list:</p>
-				<div onClick={this.mealGenKeto}>Ketogenic</div>
+				<div onClick={this.mealGenKeto}>
+					Ketogenic
+					{/* <ul>
+						{this.props.store.meal.map((meal) => (
+							<InfoPage key={meal.id} meal={meal} />
+						))}
+					</ul> */}
+				</div>
 				<div onClick={this.mealGenPaleo}>Paleo</div>
 				<div onClick={this.mealGenVegan}>Vegan</div>
 				<div onClick={this.mealGenVege}>Vegetarian</div>
@@ -66,4 +76,4 @@ class UserPage extends Component {
 }
 
 // this allows us to use <App /> in index.js
-export default connect(mapStoreToProps)(UserPage);
+export default connect(mapStoreToProps)(withRouter(UserPage));

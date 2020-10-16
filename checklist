@@ -74,18 +74,22 @@ Afternoon:
 
 
 Evening 
-[]set up reducer for each diets
-[]set up saga for each diets
-[] set up route for each diet
-[] create component for each diet 
-    []saved meals page
+[x]set up reducer for each diets
+[x]set up saga for each diets
+[x] set up route for each diet
+[x] create component for each diet 
+
+
+Checklist 10/16
+Morning:
+[]saved meals page
 []post routes
     []create meals page
     []saved meals page 
-Stretch goals:
+Afternoon: 
 
 []put route
     []edit meal on saved meals page
 
-Super stretch:
+
 []populate database with real meals

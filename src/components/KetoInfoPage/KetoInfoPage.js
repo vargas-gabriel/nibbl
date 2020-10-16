@@ -10,9 +10,6 @@ class KetoInfoPage extends React.Component {
 		this.props.dispatch({ type: "FETCH_KMEALS" });
 	}
 
-	saveMeal = () => {
-		console.log("meal saved");
-	};
 	backHome = () => {
 		console.log("back home ");
 		this.props.history.push("/home");
@@ -20,6 +17,7 @@ class KetoInfoPage extends React.Component {
 
 	render() {
 		console.log(this.props.store.keto);
+		console.log(this.props.store.user.id);
 		return (
 			<div>
 				<h1 id='welcome'>

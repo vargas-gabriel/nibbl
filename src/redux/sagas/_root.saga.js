@@ -6,6 +6,7 @@ import ketoSaga from "./keto.saga";
 import paleoSaga from "./paleo.saga";
 import veganSaga from "./vegan.saga";
 import veggieSaga from "./veggie.saga";
+import indieSaga from "./indie.saga";
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -23,5 +24,6 @@ export default function* rootSaga() {
 		paleoSaga(),
 		veganSaga(),
 		veggieSaga(),
+		indieSaga(),
 	]);
 }

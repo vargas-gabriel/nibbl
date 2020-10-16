@@ -76,8 +76,10 @@ VALUES (10,4,1), (11,4,2), (12,4,3);
 SELECT * FROM "meals" JOIN "user_meals" ON "meals"."id" = "user_meals"."MEAL_ID" 
 JOIN "user" ON "user_meals"."USER_ID" = "user"."id";
 
-INSERT INTO "meals_diets" ("MEAL_ID", "DIET_ID", "TIME_ID")
+INSERT INTO "user_meals" ("USER_ID", "MEAL_ID")
 VALUES (10,4,1), (11,4,2), (12,4,3);
 SELECT * FROM "meals_diets" WHERE "DIET_ID" = 1;
 SELECT * FROM "meals" WHERE "type" = 1;
 
+'INSERT INTO "user_meals" ("USER_ID", "MEAL_ID")
+VALUES (1, 1);'

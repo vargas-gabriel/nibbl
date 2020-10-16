@@ -5,6 +5,7 @@ import keto from "./keto.reducer";
 import paleo from "./paleo.reducer";
 import vegan from "./vegan.reducer";
 import veggie from "./veggie.reducer";
+import indie from "./indie.reducer";
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
 	paleo,
 	vegan,
 	veggie,
+	indie,
 });
 
 export default rootReducer;

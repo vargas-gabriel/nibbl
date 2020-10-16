@@ -13,6 +13,7 @@ const ketoRouter = require("./routes/keto.router");
 const veganRouter = require("./routes/vegan.router");
 const veggieRouter = require("./routes/veggie.router");
 const paleoRouter = require("./routes/paleo.router");
+const indieRouter = require("./routes/individual.router");
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -31,6 +32,7 @@ app.use("/api/keto", ketoRouter);
 app.use("/api/vegan", veganRouter);
 app.use("/api/veggie", veggieRouter);
 app.use("/api/paleo", paleoRouter);
+app.use("/api/ind", indieRouter);
 
 // Serve static files
 app.use(express.static("build"));

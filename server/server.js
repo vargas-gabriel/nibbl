@@ -10,6 +10,9 @@ const passport = require("./strategies/user.strategy");
 // Route includes
 const userRouter = require("./routes/user.router");
 const ketoRouter = require("./routes/keto.router");
+const veganRouter = require("./routes/vegan.router");
+const veggieRouter = require("./routes/veggie.router");
+const paleoRouter = require("./routes/paleo.router");
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -25,6 +28,9 @@ app.use(passport.session());
 /* Routes */
 app.use("/api/user", userRouter);
 app.use("/api/keto", ketoRouter);
+app.use("/api/vegan", veganRouter);
+app.use("/api/veggie", veggieRouter);
+app.use("/api/paleo", paleoRouter);
 
 // Serve static files
 app.use(express.static("build"));

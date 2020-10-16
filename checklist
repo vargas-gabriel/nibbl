@@ -74,6 +74,10 @@ Afternoon:
 
 
 Evening 
+[]set up reducer for each diets
+[]set up saga for each diets
+[] set up route for each diet
+[] create component for each diet 
     []saved meals page
 []post routes
     []create meals page

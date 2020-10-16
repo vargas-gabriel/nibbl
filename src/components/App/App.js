@@ -21,6 +21,9 @@ import LoginPage from "../LoginPage/LoginPage";
 import RegisterPage from "../RegisterPage/RegisterPage";
 import SavedMealsPage from "../SavedMealsPage/SavedMealsPage";
 import CreateMealPage from "../CreateMealPage/CreateMealPage";
+import PaleoInfoPage from "../PaleoInfoPage/PaleoInfoPage";
+import VeganInfoPage from "../VeganInfoPage/VeganInfoPage";
+import VeggieInfoPage from "../VeggieInfoPage/VeggieInfoPage";
 
 import "./App.css";
 
@@ -62,6 +65,24 @@ class App extends Component {
 							exact
 							path='/ketinfo'
 							component={KetoInfoPage}
+						/>
+						<ProtectedRoute
+							// logged in shows InfoPage else shows LoginPage
+							exact
+							path='/veganinfo'
+							component={VeganInfoPage}
+						/>
+						<ProtectedRoute
+							// logged in shows InfoPage else shows LoginPage
+							exact
+							path='/veggieinfo'
+							component={VeggieInfoPage}
+						/>
+						<ProtectedRoute
+							// logged in shows InfoPage else shows LoginPage
+							exact
+							path='/paleoinfo'
+							component={PaleoInfoPage}
 						/>
 						<ProtectedRoute
 							// logged in shows CreateMeal else shows LoginPage

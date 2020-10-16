@@ -40,15 +40,15 @@ class UserPage extends Component {
 	};
 	mealGenPaleo = () => {
 		console.log("clicked Paleo");
-		this.props.history.push("/info");
+		this.props.history.push("/paleoinfo");
 	};
 	mealGenVegan = () => {
 		console.log("clicked Vegan");
-		this.props.history.push("/info");
+		this.props.history.push("/veganinfo");
 	};
 	mealGenVege = () => {
 		console.log("clicked Vegetarian");
-		this.props.history.push("/info");
+		this.props.history.push("/veggieinfo");
 	};
 	render() {
 		return (
@@ -59,14 +59,7 @@ class UserPage extends Component {
 				</h1>
 
 				<p>To begin, select a diet from the list:</p>
-				<div onClick={this.mealGenKeto}>
-					Ketogenic
-					{/* <ul>
-						{this.props.store.meal.map((meal) => (
-							<InfoPage key={meal.id} meal={meal} />
-						))}
-					</ul> */}
-				</div>
+				<div onClick={this.mealGenKeto}>Ketogenic</div>
 				<div onClick={this.mealGenPaleo}>Paleo</div>
 				<div onClick={this.mealGenVegan}>Vegan</div>
 				<div onClick={this.mealGenVege}>Vegetarian</div>

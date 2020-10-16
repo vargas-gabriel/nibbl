@@ -4,12 +4,13 @@ import { connect } from "react-redux";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
 
-class KetoListItem extends React.Component {
+class PaleoListItem extends React.Component {
 	componentDidMount() {}
 	saveMeal = () => {
 		console.log("you are saving:", this.props.meal.id);
 	};
 	render() {
+		console.log(this.props.store.paleo);
 		return (
 			<div>
 				<ul>
@@ -25,4 +26,4 @@ class KetoListItem extends React.Component {
 	}
 }
 
-export default connect(mapStoreToProps)(withRouter(KetoListItem));
+export default connect(mapStoreToProps)(withRouter(PaleoListItem));

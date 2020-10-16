@@ -16,6 +16,7 @@ class SavedListItem extends React.Component {
 						<div>{this.props.saved.calories}</div>
 						<div>{this.props.saved.youtube}</div>
 						<button>Edit</button>
+						<button>Remove</button>
 					</li>
 				</ul>
 			</div>

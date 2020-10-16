@@ -11,12 +11,35 @@ class CreateMealPage extends Component {
 		type: "",
 		time: "",
 	};
-	handleChange = (event, propertyName) => {
+	handleMealChange = (event) => {
+		console.log(event.target.value);
 		this.setState({
-			...this.state,
-			[propertyName]: event.target.value,
+			meal: event.target.value,
 		});
-		console.log(this.state);
+	};
+	handleCalChange = (event) => {
+		console.log(event.target.value);
+		this.setState({
+			calories: event.target.value,
+		});
+	};
+	handleYouChange = (event) => {
+		console.log(event.target.value);
+		this.setState({
+			youtube: event.target.value,
+		});
+	};
+	handleTypeChange = (event) => {
+		console.log(event.target.value);
+		this.setState({
+			type: event.target.value,
+		});
+	};
+	handleTimeChange = (event) => {
+		console.log(event.target.value);
+		this.setState({
+			time: event.target.value,
+		});
 	};
 
 	handleSubmit = () => {
@@ -41,23 +64,23 @@ class CreateMealPage extends Component {
 						value={this.state.meal}
 						type='text'
 						placeholder='Meal Name'
-						onChange={(event) => this.handleChange(event, "meal")}></input>
+						onChange={this.handleMealChange}></input>
 					<input
 						required
 						value={this.state.calories}
 						type='number'
 						placeholder='Calories'
-						onChange={(event) => this.handleChange(event, "calories")}></input>
+						onChange={this.handleCalChange}></input>
 					<input
 						required
 						value={this.state.youtube}
 						type='text'
 						placeholder='Youtube Link'
-						onChange={(event) => this.handleChange(event, "youtube")}></input>
+						onChange={this.handleYouChange}></input>
 					<select
 						required
 						value={this.state.type}
-						onChange={(event) => this.handleChange(event, "type")}>
+						onChange={this.handleTypeChange}>
 						<option disabled value='0'>
 							Pick Diet
 						</option>
@@ -69,7 +92,7 @@ class CreateMealPage extends Component {
 					<select
 						required
 						value={this.state.time}
-						onChange={(event) => this.handleChange(event, "time")}>
+						onChange={this.handleTimeChange}>
 						<option disabled value='0'>
 							Pick Type
 						</option>

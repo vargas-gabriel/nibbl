@@ -83,3 +83,6 @@ SELECT * FROM "meals" WHERE "type" = 1;
 
 'INSERT INTO "user_meals" ("USER_ID", "MEAL_ID")
 VALUES (1, 1);'
+
+SELECT * FROM "meals" JOIN "user_meals" ON "meals"."id" = "user_meals"."MEAL_ID" 
+JOIN "user" ON "user_meals"."USER_ID" = "user"."id" WHERE "user"."id" = 1;

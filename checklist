@@ -83,6 +83,8 @@ Evening
 Checklist 10/16
 Morning:
 []saved meals page
+    [x]query working
+    [] update query to send back meal data: join tables
 []post routes
     []create meals page
     []saved meals page 

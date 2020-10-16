@@ -10,9 +10,6 @@ class PaleoInfoPage extends React.Component {
 		this.props.dispatch({ type: "FETCH_PMEALS" });
 	}
 
-	saveMeal = () => {
-		console.log("meal saved");
-	};
 	backHome = () => {
 		console.log("back home ");
 		this.props.history.push("/home");

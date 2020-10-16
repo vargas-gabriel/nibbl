@@ -9,9 +9,13 @@ router.get("/:id", (req, res) => {
 	// GET route code here
 	// getting keto meals from db
 	console.log("this is req.body in get:", req.params.id);
-	let query = 'SELECT * FROM "user_meals" WHERE "USER_ID" = $1;';
+	// let query = 'SELECT * FROM "user_meals" WHERE "USER_ID" = $1;';
+	// pool
+	let query = `SELECT * FROM "meals" JOIN "user_meals" ON "meals"."id" = "user_meals"."MEAL_ID" 
+	JOIN "user" ON "user_meals"."USER_ID" = "user"."id" WHERE "user"."id" = $1;`;
 	pool
 		.query(query, [req.params.id])
+
 		.then((result) => {
 			res.send(result.rows);
 		})

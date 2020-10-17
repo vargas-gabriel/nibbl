@@ -5,16 +5,17 @@ import mapStoreToProps from "../../redux/mapStoreToProps";
 
 class CreateMealPage extends Component {
 	state = {
-		meal: "",
+		mealName: "",
 		calories: "",
 		youtube: "",
 		type: "",
 		time: "",
+		id: this.props.store.user.id,
 	};
 	handleMealChange = (event) => {
 		console.log(event.target.value);
 		this.setState({
-			meal: event.target.value,
+			mealName: event.target.value,
 		});
 	};
 	handleCalChange = (event) => {
@@ -44,6 +45,10 @@ class CreateMealPage extends Component {
 
 	handleSubmit = () => {
 		console.log("submitted", this.state);
+		this.props.dispatch({
+			type: "CREATE_MEAL",
+			payload: this.state,
+		});
 
 		this.setState({
 			meal: "",

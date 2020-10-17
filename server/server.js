@@ -14,7 +14,8 @@ const veganRouter = require("./routes/vegan.router");
 const veggieRouter = require("./routes/veggie.router");
 const paleoRouter = require("./routes/paleo.router");
 const indieRouter = require("./routes/individual.router");
-
+const addRouter = require("./routes/add.router");
+const removeRouter = require("./routes/delete.router");
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,6 +34,8 @@ app.use("/api/vegan", veganRouter);
 app.use("/api/veggie", veggieRouter);
 app.use("/api/paleo", paleoRouter);
 app.use("/api/ind", indieRouter);
+app.use("/api/add", addRouter);
+app.use("/api/remove", removeRouter);
 
 // Serve static files
 app.use(express.static("build"));

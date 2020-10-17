@@ -6,7 +6,13 @@ import { withRouter } from "react-router-dom";
 
 class SavedListItem extends React.Component {
 	componentDidMount() {}
-
+	removeMeal = () => {
+		console.log(this.props.store.user.id, "is removing:", this.props.saved.id);
+		this.props.dispatch({
+			type: "REMOVE_MEAL",
+			url: `/api/remove/${this.props.store.user.id}`,
+		});
+	};
 	render() {
 		return (
 			<div>
@@ -16,7 +22,7 @@ class SavedListItem extends React.Component {
 						<div>{this.props.saved.calories}</div>
 						<div>{this.props.saved.youtube}</div>
 						<button>Edit</button>
-						<button>Remove</button>
+						<button onClick={this.removeMeal}>Remove</button>
 					</li>
 				</ul>
 			</div>

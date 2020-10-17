@@ -8,10 +8,7 @@ const indieReducer = (state = [], action) => {
 			return action.payload;
 		default:
 	}
-	switch (action.type) {
-		case "CLEAR_VALUES":
-			return initialState;
-	}
+
 	return state;
 };
 

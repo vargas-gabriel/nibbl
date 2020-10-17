@@ -5,13 +5,22 @@ import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
 
 class SavedListItem extends React.Component {
+	// state = {
+	// 	userId: this.props.store.user.id,
+	// };
 	componentDidMount() {}
-	removeMeal = () => {
-		console.log(this.props.store.user.id, "is removing:", this.props.saved.id);
+	removeMeal = (userId) => {
+		// console.log(
+		// 	this.props.store.user.id,
+		// 	"is removing:",
+		// 	this.props.saved.id,
+		// 	userId
+		// ),
 		this.props.dispatch({
 			type: "REMOVE_MEAL",
-			url: `/api/remove/${this.props.store.user.id}`,
+			url: `/api/ind/${this.props.store.user.id}`,
 		});
+		window.location.reload();
 	};
 	render() {
 		return (

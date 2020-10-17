@@ -19,9 +19,19 @@ function* fetchIndMeal(action) {
 		console.log(err);
 	}
 }
+function* removeMeal(action) {
+	try {
+		let response = yield axios.delete(action.url);
+		console.log("this is the payload:", response.url);
+		yield put({ type: "FETCH_IND_MEAL" });
+	} catch (err) {
+		console.log(err);
+	}
+}
 
 function* indieSaga() {
 	yield takeLatest("ADD_IND_MEAL", addIndMeal);
 	yield takeLatest("FETCH_IND_MEAL", fetchIndMeal);
+	yield takeLatest("REMOVE_MEAL", removeMeal);
 }
 export default indieSaga;

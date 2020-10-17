@@ -10,11 +10,15 @@ class SavedMealsPage extends Component {
 	};
 	// this component doesn't do much to start, just renders some user info to the DOM
 	componentDidMount() {
+		this.setSaved();
+	}
+	setSaved = () => {
 		this.props.dispatch({
 			type: "FETCH_IND_MEAL",
 			url: `/api/ind/${this.props.store.user.id}`,
 		});
-	}
+	};
+
 	render() {
 		return (
 			<div>

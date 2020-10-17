@@ -88,3 +88,4 @@ SELECT * FROM "meals" JOIN "user_meals" ON "meals"."id" = "user_meals"."MEAL_ID"
 JOIN "user" ON "user_meals"."USER_ID" = "user"."id" WHERE "user"."id" = 1;
 
 DELETE from "user_meals" WHERE "USER_ID" = $1;
+DELETE FROM "user_meals" WHERE "USER_ID" = $1;`;

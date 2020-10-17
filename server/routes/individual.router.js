@@ -9,8 +9,6 @@ router.get("/:id", (req, res) => {
 	// GET route code here
 	// getting keto meals from db
 	console.log("this is req.body in get:", req.params.id);
-	// let query = 'SELECT * FROM "user_meals" WHERE "USER_ID" = $1;';
-	// pool
 	let query = `SELECT * FROM "meals" JOIN "user_meals" ON "meals"."id" = "user_meals"."MEAL_ID" 
 	JOIN "user" ON "user_meals"."USER_ID" = "user"."id" WHERE "user"."id" = $1;`;
 	pool
@@ -28,7 +26,7 @@ router.get("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
 	// DELETE route code here
 	console.log(req.params);
-	queryText = `DELETE from "user_meals" WHERE "USER_ID" = $1;`;
+	queryText = `DELETE FROM "user_meals" WHERE "USER_ID" = $1;`;
 	console.log("req.params.id is:", req.params.id);
 	pool
 		.query(queryText, [req.params.id])
@@ -37,7 +35,7 @@ router.delete("/:id", (req, res) => {
 			res.send(result.rows);
 		})
 		.catch((err) => {
-			console.log("got an error in shelf DELETE", err);
+			console.log("got an error in meal DELETE", err);
 			res.sendStatus(500);
 		});
 });

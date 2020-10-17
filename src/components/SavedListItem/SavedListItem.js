@@ -9,7 +9,7 @@ class SavedListItem extends React.Component {
 	// 	userId: this.props.store.user.id,
 	// };
 	componentDidMount() {}
-	removeMeal = (userId) => {
+	removeMeal = () => {
 		// console.log(
 		// 	this.props.store.user.id,
 		// 	"is removing:",

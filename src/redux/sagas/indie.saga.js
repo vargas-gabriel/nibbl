@@ -28,10 +28,20 @@ function* removeMeal(action) {
 		console.log(err);
 	}
 }
+function* editMeal(action) {
+	try {
+		let indMealResponse = yield axios.put(action.url);
+		console.log("this is the payload:", indMealResponse.data);
+		yield put({ type: "FETCH_IND_MEAL" });
+	} catch (err) {
+		console.log(err);
+	}
+}
 
 function* indieSaga() {
 	yield takeLatest("ADD_IND_MEAL", addIndMeal);
 	yield takeLatest("FETCH_IND_MEAL", fetchIndMeal);
 	yield takeLatest("REMOVE_MEAL", removeMeal);
+	yield takeLatest("EDIT_MEAL", editMeal);
 }
 export default indieSaga;

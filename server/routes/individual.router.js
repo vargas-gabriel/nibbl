@@ -59,4 +59,22 @@ router.post("/", (req, res) => {
 		});
 });
 
+router.put("/:id", (req, res) => {
+	// DELETE route code here
+	console.log("req.params are:", req.params, "req.body is:", req.body);
+	queryText = `DELETE FROM "user_meals" WHERE "USER_ID" = $1;`;
+	console.log("req.params.id is:", req.params.id);
+	res.sendStatus(200);
+	// pool
+	// 	.query(queryText, [req.params.id])
+	// 	.then((result) => {
+	// 		console.log("success! deleted!");
+	// 		res.send(result.rows);
+	// 	})
+	// 	.catch((err) => {
+	// 		console.log("got an error in meal DELETE", err);
+	// 		res.sendStatus(500);
+	// 	});
+});
+
 module.exports = router;

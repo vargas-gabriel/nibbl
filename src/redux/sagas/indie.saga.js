@@ -30,11 +30,7 @@ function* removeMeal(action) {
 }
 function* addNote(action) {
 	try {
-		let indMealResponse = yield axios.post(
-			"/api/ind",
-			action.url,
-			action.payload
-		);
+		let indMealResponse = yield axios.put(action.url, action.payload);
 		console.log("this is the payload:", indMealResponse.data);
 		yield put({ type: "FETCH_IND_MEAL" });
 	} catch (err) {

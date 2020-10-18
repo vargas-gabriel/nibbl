@@ -24,28 +24,44 @@ class SavedListItem extends React.Component {
 	};
 	addNote = () => {
 		console.log(this.state);
-		// console.log("submitted", this.state);
-		// this.props.dispatch({
-		// 	type: "ADD_NOTE",
-		// 	url: `/api/ind/${this.props.saved.MEAL_ID}`,
-		// 	payload: this.state.note,
-		// });
-		// this.setState({
-		// 	note: "",
-		// });
+		console.log("submitted", this.state);
+		this.props.dispatch({
+			type: "ADD_NOTE",
+			url: `/api/ind/${this.props.saved.MEAL_ID}`,
+			payload: this.state,
+		});
+		window.location.reload();
+	};
+	refreshPage = () => {
+		window.location.reload();
 	};
 	render() {
+		let obj = JSON.stringify(this.props.saved.notes);
+		console.log(this.props.saved.notes);
 		return (
 			<div>
 				<ul>
 					<li>
 						<div>
-							{this.props.saved.mealName}
+							<div>
+								Name:
+								{this.props.saved.mealName}
+							</div>
 							{""}
-							{this.props.saved.calories}
+							<div>
+								Calories:
+								{this.props.saved.calories}
+							</div>
 							{""}
-							{this.props.saved.youtube}
+							<div>
+								Youtube Link:
+								{this.props.saved.youtube}
+							</div>
 							{""}
+							<div>
+								Notes:
+								{this.props.saved.notes}
+							</div>
 							<form onSubmit={this.addNote}>
 								<input
 									onChange={this.handleChange}
@@ -54,7 +70,6 @@ class SavedListItem extends React.Component {
 									placeholder='add a note'></input>
 								<button type='submit'>Add Note</button>
 							</form>
-
 							<button onClick={this.removeMeal}>Remove</button>
 						</div>
 					</li>

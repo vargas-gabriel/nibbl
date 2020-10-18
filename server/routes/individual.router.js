@@ -59,14 +59,15 @@ router.post("/", (req, res) => {
 		});
 });
 
-router.post("/:id", (req, res) => {
+router.put("/:id", (req, res) => {
 	// DELETE route code here
+	let obj = JSON.stringify(req.body);
 	console.log("req.params are:", req.params.id, "req.body is:", req.body);
-	queryText = `UPDATE "meals" SET "mealName" = $1 WHERE "id" = $2;`;
+	queryText = `UPDATE "meals" SET "notes" = $1 WHERE "id" = $2;`;
 	console.log("req.params.id is:", req.params.id);
 	res.sendStatus(200);
 	pool
-		.query(queryText, [req.body.note, req.params.id])
+		.query(queryText, [req.body, req.params.id])
 		.then((result) => {
 			console.log("success! note added!");
 			res.send(result.rows);

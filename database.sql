@@ -28,6 +28,7 @@ CREATE TABLE "meals" (
     "youtube" VARCHAR (2000) NOT NULL,
     "type" INT NOT NULL,
     "time" INT NOT NULL
+    "notes" VARCHAR (10000)
 );
 
 

@@ -51,7 +51,7 @@ class CreateMealPage extends Component {
 		});
 
 		this.setState({
-			meal: "",
+			mealName: "",
 			calories: "",
 			youtube: "",
 			type: "",

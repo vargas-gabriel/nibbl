@@ -5,6 +5,9 @@ import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
 
 class SavedListItem extends React.Component {
+	state = {
+		note: "",
+	};
 	componentDidMount() {}
 	removeMeal = () => {
 		this.props.dispatch({
@@ -13,23 +16,47 @@ class SavedListItem extends React.Component {
 		});
 		window.location.reload();
 	};
-	editMeal = () => {
-		console.log("editing this meal number:", this.props.saved.MEAL_ID);
-		this.props.dispatch({
-			type: "EDIT_MEAL",
-			url: `/api/ind/${this.props.saved.MEAL_ID}`,
+	handleChange = (event) => {
+		console.log(event.target.value);
+		this.setState({
+			note: event.target.value,
 		});
+	};
+	addNote = () => {
+		console.log(this.state);
+		// console.log("submitted", this.state);
+		// this.props.dispatch({
+		// 	type: "ADD_NOTE",
+		// 	url: `/api/ind/${this.props.saved.MEAL_ID}`,
+		// 	payload: this.state.note,
+		// });
+		// this.setState({
+		// 	note: "",
+		// });
 	};
 	render() {
 		return (
 			<div>
 				<ul>
 					<li>
-						<div>{this.props.saved.mealName}</div>
-						<div>{this.props.saved.calories}</div>
-						<div>{this.props.saved.youtube}</div>
-						<button onClick={this.editMeal}>Edit</button>
-						<button onClick={this.removeMeal}>Remove</button>
+						<div>
+							{this.props.saved.mealName}
+							{""}
+							{this.props.saved.calories}
+							{""}
+							{this.props.saved.youtube}
+							{""}
+							<form onSubmit={this.addNote}>
+								<input
+									onChange={this.handleChange}
+									type='text'
+									value={this.state.note}
+									placeholder='add a note'></input>
+								<button type='submit'>Add Note</button>
+							</form>
+
+							<button onClick={this.removeMeal}>Remove</button>
+						</div>
 					</li>
 				</ul>
 			</div>

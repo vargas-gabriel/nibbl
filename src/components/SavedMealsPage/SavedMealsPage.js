@@ -15,6 +15,7 @@ class SavedMealsPage extends Component {
 	setSaved = () => {
 		this.props.dispatch({
 			type: "FETCH_IND_MEAL",
+
 			url: `/api/ind/${this.props.store.user.id}`,
 		});
 	};

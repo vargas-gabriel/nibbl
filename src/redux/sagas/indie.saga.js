@@ -12,6 +12,7 @@ function* addIndMeal(action) {
 }
 
 function* fetchIndMeal(action) {
+	console.log("this is the action:", action);
 	try {
 		let indResponse = yield axios.get(action.url);
 		console.log("url to check", action.url);

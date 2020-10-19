@@ -7,9 +7,8 @@ const indieReducer = (state = [], action) => {
 		case "SET_IND_MEAL":
 			return action.payload;
 		default:
+			return state;
 	}
-
-	return state;
 };
 
 export default indieReducer;

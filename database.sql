@@ -27,8 +27,9 @@ CREATE TABLE "meals" (
     "calories" VARCHAR (1000) NOT NULL,
     "youtube" VARCHAR (2000) NOT NULL,
     "type" INT NOT NULL,
-    "time" INT NOT NULL
-    "notes" VARCHAR (10000)
+    "time" INT NOT NULL,
+    "likes" INT,
+    "dislikes" INT
 );
 
 

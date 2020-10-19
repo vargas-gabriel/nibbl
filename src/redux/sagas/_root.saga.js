@@ -8,7 +8,6 @@ import veganSaga from "./vegan.saga";
 import veggieSaga from "./veggie.saga";
 import indieSaga from "./indie.saga";
 import createSaga from "./create.saga";
-import removeSaga from "./remove.saga";
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -28,6 +27,5 @@ export default function* rootSaga() {
 		veggieSaga(),
 		indieSaga(),
 		createSaga(),
-		removeSaga(),
 	]);
 }

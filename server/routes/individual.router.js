@@ -7,7 +7,7 @@ const router = express.Router();
  */
 router.get("/:id", (req, res) => {
 	// GET route code here
-	// getting keto meals from db
+
 	console.log("this is req.body in get:", req.params.id);
 	let query = `SELECT * FROM "meals" JOIN "user_meals" ON "meals"."id" = "user_meals"."MEAL_ID" 
 	JOIN "user" ON "user_meals"."USER_ID" = "user"."id" WHERE "user"."id" = $1;`;
@@ -15,6 +15,7 @@ router.get("/:id", (req, res) => {
 		.query(query, [req.params.id])
 
 		.then((result) => {
+			console.log("response from get is:", result.rows);
 			res.send(result.rows);
 		})
 		.catch((err) => {
@@ -62,14 +63,14 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
 	// DELETE route code here
 	let obj = JSON.stringify(req.body);
-	console.log("req.params are:", req.params.id, "req.body is:", req.body);
-	queryText = `UPDATE "meals" SET "notes" = $1 WHERE "id" = $2;`;
+	console.log("req.params are:", req.params.id);
+	queryText = `UPDATE "meals" SET "likes" = "likes"+ 1 WHERE "id" = $1;`;
 	console.log("req.params.id is:", req.params.id);
 	res.sendStatus(200);
 	pool
-		.query(queryText, [req.body, req.params.id])
+		.query(queryText, [req.params.id])
 		.then((result) => {
-			console.log("success! note added!");
+			console.log("success! like added!");
 			res.send(result.rows);
 		})
 		.catch((err) => {

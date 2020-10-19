@@ -23,17 +23,17 @@ import { put, takeLatest } from "redux-saga/effects";
 // 	});
 // }
 
-function* fetchIndMeal(action) {
-	try {
-		let indResponse = yield axios.get(action.url);
-		yield put({ type: "SET_IND_MEAL", payload: indResponse.data });
-	} catch (err) {
-		console.log(err);
-	}
-}
+// function* fetchIndMeal(action) {
+// 	try {
+// 		let indResponse = yield axios.get(action.url);
+// 		yield put({ type: "SET_IND_MEAL", payload: indResponse.data });
+// 	} catch (err) {
+// 		console.log(err);
+// 	}
+// }
 
-function* removeSaga() {
-	// yield takeLatest("REMOVE_MEAL", removeMeal);
-	yield takeLatest("FETCH_IND_MEAL", fetchIndMeal);
-}
+// function* removeSaga() {
+// 	// yield takeLatest("REMOVE_MEAL", removeMeal);
+// 	yield takeLatest("FETCH_IND_MEAL", fetchIndMeal);
+// }
 export default removeSaga;

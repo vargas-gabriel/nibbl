@@ -5,9 +5,6 @@ import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
 
 class SavedListItem extends React.Component {
-	state = {
-		note: "",
-	};
 	componentDidMount() {}
 	removeMeal = () => {
 		this.props.dispatch({
@@ -16,28 +13,26 @@ class SavedListItem extends React.Component {
 		});
 		window.location.reload();
 	};
-	handleChange = (event) => {
-		console.log(event.target.value);
-		this.setState({
-			note: event.target.value,
-		});
-	};
-	addNote = () => {
-		console.log(this.state);
-		console.log("submitted", this.state);
+
+	like = () => {
+		console.log("liked:", this.props.saved.MEAL_ID);
 		this.props.dispatch({
-			type: "ADD_NOTE",
+			type: "ADD_LIKE",
 			url: `/api/ind/${this.props.saved.MEAL_ID}`,
-			payload: this.state,
 		});
 		window.location.reload();
 	};
-	refreshPage = () => {
+	likeMessage = () => {
+		console.log("mouse over like");
+	};
+	disLikeMessage = () => {
+		console.log("mouse over dislike");
+	};
+	disLike = () => {
+		console.log("disliked:", this.props.saved.MEAL_ID);
 		window.location.reload();
 	};
 	render() {
-		let obj = JSON.stringify(this.props.saved.notes);
-		console.log(this.props.saved.notes);
 		return (
 			<div>
 				<ul>
@@ -58,18 +53,13 @@ class SavedListItem extends React.Component {
 								{this.props.saved.youtube}
 							</div>
 							{""}
-							<div>
-								Notes:
-								{this.props.saved.notes}
+							<div onMouseOver={this.likeMessage} onClick={this.like}>
+								Likes: {this.props.saved.likes}
 							</div>
-							<form onSubmit={this.addNote}>
-								<input
-									onChange={this.handleChange}
-									type='text'
-									value={this.state.note}
-									placeholder='add a note'></input>
-								<button type='submit'>Add Note</button>
-							</form>
+							{/* <div onMouseOver={this.disLikeMessage} onClick={this.disLike}>
+								Dislikes:
+							</div> */}
+
 							<button onClick={this.removeMeal}>Remove</button>
 						</div>
 					</li>

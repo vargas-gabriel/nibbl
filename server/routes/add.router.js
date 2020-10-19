@@ -44,7 +44,6 @@ router.post("/", (req, res) => {
 
 			const createdMealId = result.rows[0].id;
 
-			// Depending on how you make your junction table, this insert COULD change.
 			const insertMealJunctionQuery = `
       INSERT INTO "user_meals" ("USER_ID", "MEAL_ID")
       VALUES  ($1, $2);

@@ -22,8 +22,14 @@ class SavedMealsPage extends Component {
 
 	render() {
 		return (
-			<div>
-				<p> {this.props.store.user.username}'s Meals</p>
+			<div className='div'>
+				<p>My Profile</p>
+
+				<p>username:{this.props.store.user.username}</p>
+				<button>Change Username</button>
+				<p>password:##########</p>
+				<button>Change Password</button>
+				<p>My Saved Meals:</p>
 				{this.props.store.indie.map((saved) => (
 					<SavedListItem key={saved.id} saved={saved} />
 				))}

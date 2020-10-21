@@ -12,6 +12,7 @@ class VeggieInfoPage extends React.Component {
 
 	saveMeal = () => {
 		console.log("meal saved");
+		alert("meal saved to your profile");
 	};
 	backHome = () => {
 		console.log("back home ");
@@ -21,8 +22,8 @@ class VeggieInfoPage extends React.Component {
 	render() {
 		console.log(this.props.store.veggie);
 		return (
-			<div>
-				<h1 id='welcome'>
+			<div className='div'>
+				<h1 id='welcome' className='div'>
 					Here are your results, {this.props.store.user.username}
 				</h1>
 

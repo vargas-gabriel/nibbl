@@ -24,8 +24,8 @@ class VeganListItem extends React.Component {
 	render() {
 		console.log(this.props.meal.youtube);
 		return (
-			<div>
-				<ul>
+			<div className='container'>
+				<ul className='ul'>
 					<li>
 						<img className='img' src={this.props.meal.image} />
 						<div>{this.props.meal.mealName}</div>

@@ -21,8 +21,8 @@ class VeganInfoPage extends React.Component {
 	render() {
 		console.log(this.props.store.vegan);
 		return (
-			<div>
-				<h1 id='welcome'>
+			<div className='div'>
+				<h1 id='welcome' className='div'>
 					Here are your results, {this.props.store.user.username}
 				</h1>
 

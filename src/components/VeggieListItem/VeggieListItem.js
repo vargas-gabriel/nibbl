@@ -24,8 +24,8 @@ class VeggieListItem extends React.Component {
 	render() {
 		console.log(this.props.store.veggie);
 		return (
-			<div>
-				<ul>
+			<div className='container'>
+				<ul className='ul'>
 					<li>
 						<img className='img' src={this.props.meal.image} />
 						<div>{this.props.meal.mealName}</div>

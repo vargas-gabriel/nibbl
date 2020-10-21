@@ -2,3 +2,9 @@
 	height: 300px;
 	width: 300px;
 }
+.flex-container {
+	display: inline-block;
+}
+ul {
+	list-style-type: none;
+}

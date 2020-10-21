@@ -19,8 +19,8 @@ class KetoInfoPage extends React.Component {
 		console.log(this.props.store.keto);
 		console.log(this.props.store.user.id);
 		return (
-			<div>
-				<h1 id='welcome'>
+			<div className='div'>
+				<h1 id='welcome' className='div'>
 					Here are your results, {this.props.store.user.username}
 				</h1>
 

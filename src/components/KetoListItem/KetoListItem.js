@@ -20,22 +20,25 @@ class KetoListItem extends React.Component {
 			type: "ADD_IND_MEAL",
 			payload: this.state,
 		});
+		alert("meal saved to your profile");
 	};
 	render() {
 		return (
 			<div>
-				<ul>
-					<li>
-						<img className='img' src={this.props.meal.image} />
-						<div>{this.props.meal.mealName}</div>
-						<div>{this.props.meal.calories}</div>
-						<div>
-							<a href={`${this.props.meal.youtube}`}></a>
-						</div>
+				<div>
+					<ul className='ul'>
+						<li>
+							<img className='img' src={this.props.meal.image} />
+							<div>{this.props.meal.mealName}</div>
+							<div>{this.props.meal.calories}</div>
+							<div>
+								<a href={`${this.props.meal.youtube}`}></a>
+							</div>
 
-						<button onClick={this.saveMeal}>Save Meal</button>
-					</li>
-				</ul>
+							<button onClick={this.saveMeal}>Save Meal</button>
+						</li>
+					</ul>
+				</div>
 			</div>
 		);
 	}

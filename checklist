@@ -98,5 +98,9 @@ checklist 10/20
 
 checklist 10/21
 []styling 
+    [x]user page
+    []results pages
+    []create page
+    []profile page
 [] ask edan about rendering url
 []Look into using new router for ind meals dispatch 

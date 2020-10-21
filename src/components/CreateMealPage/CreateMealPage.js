@@ -68,8 +68,8 @@ class CreateMealPage extends Component {
 
 	render() {
 		return (
-			<div>
-				<p> Create Your Own Meal</p>
+			<div className='div'>
+				<p>Hi {this.props.store.user.username}, Create Your Own Meal Below:</p>
 				<form onSubmit={this.handleSubmit}>
 					<input
 						required

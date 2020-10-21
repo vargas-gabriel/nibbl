@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 // import LogOutButton from "../LogOutButton/LogOutButton";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
+import "./VeggieListItem.css";
 
 class VeggieListItem extends React.Component {
 	state = {
@@ -26,9 +27,12 @@ class VeggieListItem extends React.Component {
 			<div>
 				<ul>
 					<li>
+						<img className='img' src={this.props.meal.image} />
 						<div>{this.props.meal.mealName}</div>
 						<div>{this.props.meal.calories}</div>
-						<div>{this.props.meal.youtube}</div>
+						<div>
+							<a href={this.props.meal.youtube} />
+						</div>
 						<button onClick={this.saveMeal}>Save Meal</button>
 					</li>
 				</ul>

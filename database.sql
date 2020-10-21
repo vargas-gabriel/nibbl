@@ -48,26 +48,25 @@ CREATE TABLE "meals_diets" (
     "TIME_ID" INT REFERENCES "meals"
 );
 
-INSERT INTO "meals" ("mealName", "calories", "youtube", "type", "time")
-VALUES ('Keto Breakfast Casserole', '500', 'https://www.youtube.com/watch?v=1Aydu2xmue8&ab_channel=LowCarbRecipeswithJennifer', 1, 1;
+INSERT INTO "meals" ("mealName", "calories", "youtube", "image", "type", "time" )
+  VALUES (('Soufflé Omelette With Cheese', '500', 'https://www.youtube.com/watch?v=y-Wr401Bio4&ab_channel=livelife365',1, 1, 'https://www.seriouseats.com/2019/02/20190122-souffle-omelet-vicky-wasik-15.jpg'),
+  ('Spatchcocked (Butterflied) Roast Chicken', '500', 'https://www.youtube.com/watch?v=XIZxT7iI-QI&ab_channel=BabishCulinaryUniverse',1, 2, 'https://www.seriouseats.com/recipes/images/2017/01/20170110-spatchcock-chicken-23.jpg'),
+  ('Sous Vide Salmon', '375', 'https://www.youtube.com/watch?v=KObL442PWhQ&ab_channel=BabishCulinaryUniverse',1, 3, 'https://www.seriouseats.com/recipes/images/2016/08/20160826-sous-vide-salmon-46.jpg'),
+  ('Menemen (Turkish-Style Scrambled Eggs With Tomatoes, Onions, and Chilies)', '435', 'https://www.youtube.com/watch?v=uFxXw0eSSC0&ab_channel=J.KenjiL%C3%B3pez-Alt', 2, 1, 'https://www.seriouseats.com/recipes/images/2014/09/20140923-menemen-recipe-14.jpg'),
+  ('Roasted Eggplant With Tahini, Pine Nuts, and Lentils Recipe', '430', 'https://www.youtube.com/watch?v=CUA5gYeb7VA&ab_channel=MYTASTYFOODY', 2, 2, 'https://www.seriouseats.com/recipes/images/2016/03/20160410-roasted-eggplant-lentil-vegan-5.jpg'),
+  ('Sautéed Japanese Turnips With Turnip Greens', '650', 'https://www.youtube.com/watch?v=Dj2cneh-cxI&ab_channel=JudiintheKitchen', 2, 3, 'https://www.seriouseats.com/recipes/images/2016/05/20160520-japanese-turnips-vicky-wasik-8.jpg'),
+  ('Sourdough Waffles', '690', 'https://www.youtube.com/watch?v=bUTH1pqEzCA&ab_channel=FlavorLab', 3, 1, 'https://www.seriouseats.com/2011/01/20200615-sourdough-waffle-reshoot-ariel-kanter.jpg'),
+  ('Mexican Street Corn Salad', '680', 'https://www.youtube.com/watch?v=VG5lJMwjlcU&ab_channel=TheStayAtHomeChef', 3, 2, 'https://www.seriouseats.com/2019/07/20190901-esquites-reshoot-vicky-wasik-1.jpg'),
+  ('Tomato Basil Soup', '435', 'https://www.youtube.com/watch?v=W88m7LKFR9s&ab_channel=YourFoodLab', 3, 3, 'https://www.seriouseats.com/recipes/images/20110224-dt-nordstrom-tomato-soup.jpg'),
+  ('Japanese-Style Salted Salmon (Shiozake)', '550', 'https://www.youtube.com/watch?v=cr2cP89TtIk&ab_channel=JapaneseCooking101', 4,1, 'https://www.seriouseats.com/2018/07/20180620-japanese-breakfast-vicky-wasik-19.jpg'),
+  ('Grilled Skirt Steak Fajitas', '575', 'https://www.youtube.com/watch?v=bptRd0YLVe4&ab_channel=FoodNetwork', 4, 2, 'https://www.seriouseats.com/2018/05/20130621-fajitas-food-lab-61-large.jpg'),
+  ('All-American Beef Stew', '550', 'https:///www.youtube.com/watch?v=8DCw_eR_iPA&ab_channel=BabishCulinaryUniverse', 4, 3, 'https://www.seriouseats.com/recipes/images/2016/01/20160116-american-beef-stew-recipe-34.jpg'));
 
-INSERT INTO "meals" ("mealName", "calories", "youtube", "type", "time")
-VALUES ('Keto Lunch', '600', 'youtube.com', 1, 2), ('Keto Dinner', '800', 'youtube', 1, 3), ('Vegan Breakfast', '500', 'youtube', 2, 1), ('Vegan Lunch', '430', 'youtube', 2, 2), 
-('Vegan Dinner', '650', 'youtube', 2, 3), ('Vegetarian Breakfast', '690', 'youtube', 3, 1), ('Vegetarian Lunch', '680', 'youtube', 3, 2), ('Vegetarian Dinner', '750', 'youtube', 3, 3),
-('Paleo BreakFast', '550', 'youtube', 4, 1), ('Paleo Lunch', '575', 'youtube', 4, 2), ('Paleo Dinner', '550', 'youtube', 4, 3);
 
 
-SELECT * FROM movies JOIN movies_genres ON movies.id
- = movies_genres.movies_id JOIN genres ON
-  movies_genres.genres_id = genres.id WHERE movies.id = $1;";
 
 
-SELECT * FROM "species" JOIN "junction" ON "species"."id" = "junction"."species_id" 
-JOIN "class" ON "junction"."class_id" = "class"."id";
-INSERT INTO "junction" ("species_id", "class_id")
-VALUES (1, 4), (2, 4), (3, 5), (4, 5), (5, 5), (6, 3), (7, 2), 
-(8, 2), (9, 2), (10, 2), (11, 2), (12, 2), (13, 1), (14, 1), (15, 1), 
-(16, 1), (17, 1), (18, 1), (19, 1), (20, 1);
+
 
 SELECT * FROM "meals" JOIN "meals_diets" ON "meals"."id" = "meals_diets"."MEAL_ID" 
 JOIN "diets" ON "meals_diets"."DIET_ID" = "diets"."id";

@@ -26,8 +26,8 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
 	// POST route code here
 	const insertMealQuery = `
-	INSERT INTO "meals" ("mealName", "calories", "youtube", "type", "time")
-  VALUES ($1, $2, $3, $4, $5)
+	INSERT INTO "meals" ("mealName", "calories", "youtube", "image", "type", "time" )
+  VALUES ($1, $2, $3, $4, $5, $6)
   RETURNING "id";`;
 
 	// FIRST QUERY MAKES MOVIE
@@ -36,6 +36,7 @@ router.post("/", (req, res) => {
 			req.body.mealName,
 			req.body.calories,
 			req.body.youtube,
+			req.body.image,
 			req.body.type,
 			req.body.time,
 		])

@@ -8,6 +8,7 @@ class CreateMealPage extends Component {
 		mealName: "",
 		calories: "",
 		youtube: "",
+		image: "",
 		type: "",
 		time: "",
 		id: this.props.store.user.id,
@@ -28,6 +29,12 @@ class CreateMealPage extends Component {
 		console.log(event.target.value);
 		this.setState({
 			youtube: event.target.value,
+		});
+	};
+	handleImgChange = (event) => {
+		console.log(event.target.value);
+		this.setState({
+			image: event.target.value,
 		});
 	};
 	handleTypeChange = (event) => {
@@ -82,6 +89,11 @@ class CreateMealPage extends Component {
 						type='text'
 						placeholder='Youtube Link'
 						onChange={this.handleYouChange}></input>
+					<input
+						required
+						value={this.state.image}
+						placeholder='Image'
+						onChange={this.handleImgChange}></input>
 					<select
 						required
 						value={this.state.type}

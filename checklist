@@ -93,5 +93,10 @@ Afternoon:
 []put route
     [] likes 
 
+checklist 10/20
+[x]populate database with real meals -include images
 
-[]populate database with real meals
+checklist 10/21
+[]styling 
+[] ask edan about rendering url
+[]Look into using new router for ind meals dispatch 

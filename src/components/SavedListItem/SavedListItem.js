@@ -38,6 +38,7 @@ class SavedListItem extends React.Component {
 				<ul>
 					<li>
 						<div>
+							<img src={this.props.saved.image} />
 							<div>
 								Name:
 								{this.props.saved.mealName}

@@ -1,0 +1,33 @@
+.div {
+	position: relative;
+	text-align: center;
+}
+
+.table {
+	display: inline-block;
+	border-collapse: collapse;
+}
+table,
+th,
+td {
+	border: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+th {
+	color: black;
+}
+.button {
+	background-color: #735dd6;
+	color: white;
+	height: 50px;
+	width: 100px;
+	border-radius: 5px;
+}
+.otherButton {
+	background-color: #3effce;
+	color: black;
+	height: 50px;
+	width: 100px;
+	border-radius: 5px;
+}

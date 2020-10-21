@@ -45,7 +45,7 @@ const Nav = (props) => {
 					Create
 				</Link>
 				<Link className='nav-link' to='/saved'>
-					Saved
+					My Profile
 				</Link>
 			</div>
 		</div>

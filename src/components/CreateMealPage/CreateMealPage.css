@@ -1,0 +1,13 @@
+.buttonSaved {
+	background-color: #735dd6;
+	color: white;
+	border-radius: 5px;
+}
+
+::placeholder {
+	color: #735dd6;
+}
+
+.inputItem {
+	color: #735dd6;
+}

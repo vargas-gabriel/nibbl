@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 // import LogOutButton from "../LogOutButton/LogOutButton";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import SavedListItem from "../SavedListItem/SavedListItem";
+import "./SavedMealsPage.css";
 
 class SavedMealsPage extends Component {
 	state = {
@@ -26,9 +27,9 @@ class SavedMealsPage extends Component {
 				<p>My Profile</p>
 
 				<p>username:{this.props.store.user.username}</p>
-				<button>Change Username</button>
+				<button className='buttonSaved'>Change Username</button>
 				<p>password:##########</p>
-				<button>Change Password</button>
+				<button className='buttonSaved2'>Change Password</button>
 				<p>My Saved Meals:</p>
 				{this.props.store.indie.map((saved) => (
 					<SavedListItem key={saved.id} saved={saved} />

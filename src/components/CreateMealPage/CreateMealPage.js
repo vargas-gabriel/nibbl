@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 // import LogOutButton from "../LogOutButton/LogOutButton";
 import mapStoreToProps from "../../redux/mapStoreToProps";
-
+import "./CreateMealPage.css";
 class CreateMealPage extends Component {
 	state = {
 		mealName: "",
@@ -72,29 +72,34 @@ class CreateMealPage extends Component {
 				<p>Hi {this.props.store.user.username}, Create Your Own Meal Below:</p>
 				<form onSubmit={this.handleSubmit}>
 					<input
+						className='inputItem'
 						required
 						value={this.state.meal}
 						type='text'
 						placeholder='Meal Name'
 						onChange={this.handleMealChange}></input>
 					<input
+						className='inputItem'
 						required
 						value={this.state.calories}
 						type='number'
 						placeholder='Calories'
 						onChange={this.handleCalChange}></input>
 					<input
+						className='inputItem'
 						required
 						value={this.state.youtube}
 						type='text'
 						placeholder='Youtube Link'
 						onChange={this.handleYouChange}></input>
 					<input
+						className='inputItem'
 						required
 						value={this.state.image}
 						placeholder='Image'
 						onChange={this.handleImgChange}></input>
 					<select
+						className='inputItem'
 						required
 						value={this.state.type}
 						onChange={this.handleTypeChange}>
@@ -107,6 +112,7 @@ class CreateMealPage extends Component {
 						<option value={4}>Paleo</option>
 					</select>
 					<select
+						className='inputItem'
 						required
 						value={this.state.time}
 						onChange={this.handleTimeChange}>
@@ -117,7 +123,9 @@ class CreateMealPage extends Component {
 						<option value={2}>Lunch</option>
 						<option value={3}>Dinner</option>
 					</select>
-					<button type='submit'>Save Meal</button>
+					<button className='buttonSaved' type='submit'>
+						Save Meal
+					</button>
 				</form>
 			</div>
 		);

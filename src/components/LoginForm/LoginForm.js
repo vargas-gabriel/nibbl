@@ -68,6 +68,9 @@ class LoginForm extends Component {
 				<div>
 					<input className='btn' type='submit' name='submit' value='Log In' />
 				</div>
+				<div>
+					<input className='btn' type='submit' name='submit' value='Touch ID' />
+				</div>
 			</form>
 		);
 	}

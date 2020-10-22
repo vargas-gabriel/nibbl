@@ -96,11 +96,19 @@ Afternoon:
 checklist 10/20
 [x]populate database with real meals -include images
 
-checklist 10/21
+checklist 10/22
+[]Make code readable for code review
+[]Make sure sql file is up to date
 []styling 
     [x]user page
     []results pages
+        []buttons
+        []add success alert to save buttons
     []create page
+        []style the alert
+        []buttons
     []profile page
-[] ask edan about rendering url
+        []like buttons
+        []remove button
+[x] ask edan about rendering url
 []Look into using new router for ind meals dispatch 

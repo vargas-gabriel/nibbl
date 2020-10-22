@@ -8,3 +8,20 @@
 	color: black;
 	border-radius: 5px;
 }
+.itemDiv {
+	padding-bottom: 10px;
+	padding-top: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px;
+	background-color: #8a78da;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.videoDiv {
+	padding-bottom: 10px;
+}

@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 // import LogOutButton from "../LogOutButton/LogOutButton";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
+import Icon from "@material-ui/core/Icon";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 
 class SavedListItem extends React.Component {
 	componentDidMount() {}
@@ -35,36 +37,25 @@ class SavedListItem extends React.Component {
 	render() {
 		return (
 			<div>
-				<ul>
-					<li>
-						<div>
-							<img src={this.props.saved.image} />
+				<div className='itemDiv'>
+					<ul className='ul'>
+						<li>
+							<img className='img' src={this.props.saved.image} />
+							<div>{this.props.saved.mealName}</div>
+							<div> Calories per serving: {this.props.saved.calories}</div>
+							<div className='videoDiv'>
+								<a href={this.props.saved.youtube} target={"_blank"}>
+									Recipe Youtube Link!
+								</a>
+							</div>
 							<div>
-								Name:
-								{this.props.saved.mealName}
+								<ThumbUpIcon onClick={this.like}></ThumbUpIcon>
+								{this.props.saved.likes}
 							</div>
-							{""}
-							<div>
-								Calories:
-								{this.props.saved.calories}
-							</div>
-							{""}
-							<div>
-								Youtube Link:
-								{this.props.saved.youtube}
-							</div>
-							{""}
-							<div onMouseOver={this.likeMessage} onClick={this.like}>
-								Likes: {this.props.saved.likes}
-							</div>
-							{/* <div onMouseOver={this.disLikeMessage} onClick={this.disLike}>
-								Dislikes:
-							</div> */}
-
-							<button onClick={this.removeMeal}>Remove</button>
-						</div>
-					</li>
-				</ul>
+							<button onClick={this.removeMeal}>Remove from Profile</button>
+						</li>
+					</ul>
+				</div>
 			</div>
 		);
 	}

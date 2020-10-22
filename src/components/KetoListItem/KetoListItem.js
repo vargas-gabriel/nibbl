@@ -25,17 +25,19 @@ class KetoListItem extends React.Component {
 	render() {
 		return (
 			<div>
-				<div>
+				<div className='itemDiv'>
 					<ul className='ul'>
 						<li>
 							<img className='img' src={this.props.meal.image} />
 							<div>{this.props.meal.mealName}</div>
-							<div>{this.props.meal.calories}</div>
-							<div>
-								<a href={`${this.props.meal.youtube}`}></a>
+							<div> Calories per serving: {this.props.meal.calories}</div>
+							<div className='videoDiv'>
+								<a href={this.props.meal.youtube} target={"_blank"}>
+									Recipe Youtube Link!
+								</a>
 							</div>
 
-							<button onClick={this.saveMeal}>Save Meal</button>
+							<button onClick={this.saveMeal}>Save to Profile</button>
 						</li>
 					</ul>
 				</div>

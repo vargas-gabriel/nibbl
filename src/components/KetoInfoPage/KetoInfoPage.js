@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 import KetoListItem from "../KetoListItem/KetoListItem";
 
 class KetoInfoPage extends React.Component {
+	//dispatch sent on page load
 	componentDidMount() {
 		this.props.dispatch({ type: "FETCH_KMEALS" });
 	}
@@ -14,7 +15,8 @@ class KetoInfoPage extends React.Component {
 		console.log("back home ");
 		this.props.history.push("/home");
 	};
-
+	// this page maps through response from reducer, then sends results
+	//as props to list item component
 	render() {
 		console.log(this.props.store.keto);
 		console.log(this.props.store.user.id);

@@ -11,6 +11,7 @@ class KetoListItem extends React.Component {
 		meal: this.props.meal.id,
 	};
 	componentDidMount() {}
+	//saves meal to user's profile (saved meals page)
 	saveMeal = () => {
 		console.log(this.props.store.user.id, "is saving:", this.props.meal.id);
 		this.setState({

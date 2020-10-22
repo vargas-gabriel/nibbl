@@ -9,10 +9,11 @@ class SavedMealsPage extends Component {
 	state = {
 		user: this.props.store.user.id,
 	};
-	// this component doesn't do much to start, just renders some user info to the DOM
+
 	componentDidMount() {
 		this.setSaved();
 	}
+	//fetches meals that user has saved
 	setSaved = () => {
 		this.props.dispatch({
 			type: "FETCH_IND_MEAL",
@@ -20,7 +21,7 @@ class SavedMealsPage extends Component {
 			url: `/api/ind/${this.props.store.user.id}`,
 		});
 	};
-
+	//map through results from db- sends to list item component
 	render() {
 		return (
 			<div className='div'>

@@ -13,7 +13,7 @@ class UserPage extends Component {
 	componentDidMount() {
 		this.getGreeting();
 	}
-
+	// this sets the greeting for the user based on the time of day
 	getGreeting = () => {
 		const date = new Date();
 		const hour = date.getHours();
@@ -34,9 +34,10 @@ class UserPage extends Component {
 			});
 		}
 	};
+	//mealGen functions push user to corresponding info page
 	mealGenKeto = () => {
 		console.log("clicked Keto");
-		// this.props.dispatch({ type: "FETCH_MEALS" });
+
 		this.props.history.push("/ketinfo");
 	};
 	mealGenPaleo = () => {
@@ -58,14 +59,6 @@ class UserPage extends Component {
 					{" "}
 					{this.state.greeting}, {this.props.store.user.username}
 				</h1>
-
-				{/* <table className='table'>
-					<thead>To begin, select a diet from the list:</thead>
-					<tr onClick={this.mealGenKeto}>Ketogenic</tr>
-					<tr onClick={this.mealGenPaleo}>Paleo</tr>
-					<tr onClick={this.mealGenVegan}>Vegan</tr>
-					<tr onClick={this.mealGenVege}>Vegetarian</tr>
-				</table> */}
 
 				<table className='table'>
 					<thead>

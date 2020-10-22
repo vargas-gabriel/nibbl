@@ -1,9 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-// import LogOutButton from "../LogOutButton/LogOutButton";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
-import Icon from "@material-ui/core/Icon";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 
 class SavedListItem extends React.Component {

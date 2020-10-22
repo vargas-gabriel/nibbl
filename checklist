@@ -68,7 +68,7 @@ Morning:
     [x]meals/junction/user
     -commit
 Afternoon: 
-[]get routes
+[x]get routes
     [x]results page
 
 
@@ -90,14 +90,14 @@ Morning:
     [x]saved meals page 
 Afternoon: 
 
-[]put route
-    [] likes 
+[x]put route
+    [x] likes 
 
 checklist 10/20
 [x]populate database with real meals -include images
 
 checklist 10/22
-[]Make code readable for code review
+[x]Make code readable for code review
 []Make sure sql file is up to date
 []styling 
     [x]user page

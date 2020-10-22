@@ -110,5 +110,6 @@ checklist 10/22
     []profile page
         []like buttons
         []remove button
+[x]conditional render nav bar
 [x] ask edan about rendering url
 []Look into using new router for ind meals dispatch 

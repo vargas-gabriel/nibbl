@@ -99,10 +99,10 @@ checklist 10/20
 checklist 10/22
 [x]Make code readable for code review
 []Make sure sql file is up to date
-[]styling 
+[x]styling 
     [x]user page
-    []results pages
-        []buttons
+    [x]results pages
+        [x]buttons
         [x]add success alert to save buttons
     [x]create page
         [x]style the alert

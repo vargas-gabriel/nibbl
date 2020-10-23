@@ -26,6 +26,7 @@ CREATE TABLE "meals" (
     "mealName" VARCHAR (80) NOT NULL,
     "calories" VARCHAR (1000) NOT NULL,
     "youtube" VARCHAR (2000) NOT NULL,
+    "image" VARCHAR (2000) NOT NULL,
     "type" INT NOT NULL,
     "time" INT NOT NULL,
     "likes" INT,
@@ -48,8 +49,8 @@ CREATE TABLE "meals_diets" (
     "TIME_ID" INT REFERENCES "meals"
 );
 
-INSERT INTO "meals" ("mealName", "calories", "youtube", "image", "type", "time" )
-  VALUES (('Soufflé Omelette With Cheese', '500', 'https://www.youtube.com/watch?v=y-Wr401Bio4&ab_channel=livelife365',1, 1, 'https://www.seriouseats.com/2019/02/20190122-souffle-omelet-vicky-wasik-15.jpg'),
+INSERT INTO "meals" ("mealName", "calories", "youtube", "type", "time", "image" )
+  VALUES ('Soufflé Omelette With Cheese', '500', 'https://www.youtube.com/watch?v=y-Wr401Bio4&ab_channel=livelife365',1, 1, 'https://www.seriouseats.com/2019/02/20190122-souffle-omelet-vicky-wasik-15.jpg'),
   ('Spatchcocked (Butterflied) Roast Chicken', '500', 'https://www.youtube.com/watch?v=XIZxT7iI-QI&ab_channel=BabishCulinaryUniverse',1, 2, 'https://www.seriouseats.com/recipes/images/2017/01/20170110-spatchcock-chicken-23.jpg'),
   ('Sous Vide Salmon', '375', 'https://www.youtube.com/watch?v=KObL442PWhQ&ab_channel=BabishCulinaryUniverse',1, 3, 'https://www.seriouseats.com/recipes/images/2016/08/20160826-sous-vide-salmon-46.jpg'),
   ('Menemen (Turkish-Style Scrambled Eggs With Tomatoes, Onions, and Chilies)', '435', 'https://www.youtube.com/watch?v=uFxXw0eSSC0&ab_channel=J.KenjiL%C3%B3pez-Alt', 2, 1, 'https://www.seriouseats.com/recipes/images/2014/09/20140923-menemen-recipe-14.jpg'),
@@ -60,7 +61,7 @@ INSERT INTO "meals" ("mealName", "calories", "youtube", "image", "type", "time" 
   ('Tomato Basil Soup', '435', 'https://www.youtube.com/watch?v=W88m7LKFR9s&ab_channel=YourFoodLab', 3, 3, 'https://www.seriouseats.com/recipes/images/20110224-dt-nordstrom-tomato-soup.jpg'),
   ('Japanese-Style Salted Salmon (Shiozake)', '550', 'https://www.youtube.com/watch?v=cr2cP89TtIk&ab_channel=JapaneseCooking101', 4,1, 'https://www.seriouseats.com/2018/07/20180620-japanese-breakfast-vicky-wasik-19.jpg'),
   ('Grilled Skirt Steak Fajitas', '575', 'https://www.youtube.com/watch?v=bptRd0YLVe4&ab_channel=FoodNetwork', 4, 2, 'https://www.seriouseats.com/2018/05/20130621-fajitas-food-lab-61-large.jpg'),
-  ('All-American Beef Stew', '550', 'https:///www.youtube.com/watch?v=8DCw_eR_iPA&ab_channel=BabishCulinaryUniverse', 4, 3, 'https://www.seriouseats.com/recipes/images/2016/01/20160116-american-beef-stew-recipe-34.jpg'));
+  ('All-American Beef Stew', '550', 'https:///www.youtube.com/watch?v=8DCw_eR_iPA&ab_channel=BabishCulinaryUniverse', 4, 3, 'https://www.seriouseats.com/recipes/images/2016/01/20160116-american-beef-stew-recipe-34.jpg');
 
 
 
@@ -72,7 +73,7 @@ SELECT * FROM "meals" JOIN "meals_diets" ON "meals"."id" = "meals_diets"."MEAL_I
 JOIN "diets" ON "meals_diets"."DIET_ID" = "diets"."id";
 
 INSERT INTO "meals_diets" ("MEAL_ID", "DIET_ID", "TIME_ID")
-VALUES (10,4,1), (11,4,2), (12,4,3);
+VALUES (1,1,1), (2,1,2), (3,1,3), (4,2,1), (5,2,2), (6,2,3), (7,3,1), (8,3,2), (9,3,3), (10,4,1), (11,4,2), (12,4,3);
 
 SELECT * FROM "meals" JOIN "user_meals" ON "meals"."id" = "user_meals"."MEAL_ID" 
 JOIN "user" ON "user_meals"."USER_ID" = "user"."id";
@@ -81,9 +82,6 @@ INSERT INTO "user_meals" ("USER_ID", "MEAL_ID")
 VALUES (10,4,1), (11,4,2), (12,4,3);
 SELECT * FROM "meals_diets" WHERE "DIET_ID" = 1;
 SELECT * FROM "meals" WHERE "type" = 1;
-
-'INSERT INTO "user_meals" ("USER_ID", "MEAL_ID")
-VALUES (1, 1);'
 
 SELECT * FROM "meals" JOIN "user_meals" ON "meals"."id" = "user_meals"."MEAL_ID" 
 JOIN "user" ON "user_meals"."USER_ID" = "user"."id" WHERE "user"."id" = 1;

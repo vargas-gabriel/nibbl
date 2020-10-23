@@ -103,13 +103,13 @@ checklist 10/22
     [x]user page
     []results pages
         []buttons
-        []add success alert to save buttons
-    []create page
-        []style the alert
-        []buttons
+        [x]add success alert to save buttons
+    [x]create page
+        [x]style the alert
+        [x]buttons
     []profile page
         []like buttons
-        []remove button
+        [x]remove button
 [x]conditional render nav bar
 [x] ask edan about rendering url
 []Look into using new router for ind meals dispatch 

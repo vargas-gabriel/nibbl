@@ -18,7 +18,7 @@ const Nav = (props) => {
 
 	return (
 		<div>
-			{/* Show the link to the info page and the logout button if the user is logged in */}
+			{/* Show the link to the nav bar if the user is logged in */}
 			{props.store.user.id && (
 				<>
 					{/* <Link className='nav-link' to='/info'>
@@ -54,7 +54,7 @@ const Nav = (props) => {
 							</Link>
 
 							<Link className='nav-link' to='/saved'>
-								My Profile
+								{props.store.user.username}
 							</Link>
 						</div>
 					</div>

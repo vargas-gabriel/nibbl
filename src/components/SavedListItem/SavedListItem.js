@@ -50,7 +50,9 @@ class SavedListItem extends React.Component {
 								<ThumbUpIcon onClick={this.like}></ThumbUpIcon>
 								{this.props.saved.likes}
 							</div>
-							<button onClick={this.removeMeal}>Remove from Profile</button>
+							<button className='buttonSaved2' onClick={this.removeMeal}>
+								Remove from Profile
+							</button>
 						</li>
 					</ul>
 				</div>

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import { withRouter } from "react-router-dom";
 import "./PaleoListItem.css";
+import swal from "sweetalert";
 
 class PaleoListItem extends React.Component {
 	state = {
@@ -20,6 +21,7 @@ class PaleoListItem extends React.Component {
 			type: "ADD_IND_MEAL",
 			payload: this.state,
 		});
+		swal("Meal saved to profile!", "success");
 	};
 	render() {
 		console.log(this.props.store.paleo);
@@ -37,7 +39,9 @@ class PaleoListItem extends React.Component {
 								</a>
 							</div>
 
-							<button onClick={this.saveMeal}>Save to Profile</button>
+							<button className='buttonSaved2' onClick={this.saveMeal}>
+								Save to Profile
+							</button>
 						</li>
 					</ul>
 				</div>

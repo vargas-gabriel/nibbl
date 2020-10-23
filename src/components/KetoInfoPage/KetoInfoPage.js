@@ -29,7 +29,9 @@ class KetoInfoPage extends React.Component {
 				{this.props.store.keto.map((meal) => (
 					<KetoListItem key={meal.id} meal={meal} />
 				))}
-				<button onClick={this.backHome}>Back to Home</button>
+				<button className='buttonSaved' onClick={this.backHome}>
+					Back to Home
+				</button>
 			</div>
 		);
 	}

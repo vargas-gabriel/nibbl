@@ -26,7 +26,9 @@ class PaleoInfoPage extends React.Component {
 				{this.props.store.paleo.map((meal) => (
 					<PaleoListItem key={meal.id} meal={meal} />
 				))}
-				<button onClick={this.backHome}>Back to Home</button>
+				<button className='buttonSaved' onClick={this.backHome}>
+					Back to Home
+				</button>
 			</div>
 		);
 	}

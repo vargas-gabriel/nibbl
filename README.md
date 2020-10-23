@@ -22,7 +22,7 @@ CREATE TABLE "user" (
 );
 ```
 
-If you would like to name your database something else, you will need to change `nibble` to the name of your new database name in `server/modules/pool.js`
+If you would like to name your database something else, you will need to change `nibbl` to the name of your new database name in `server/modules/pool.js`
 
 ## Setup Instructions
 

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 // import LogOutButton from "../LogOutButton/LogOutButton";
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import "./CreateMealPage.css";
+import swal from "sweetalert";
 class CreateMealPage extends Component {
 	state = {
 		mealName: "",
@@ -63,7 +64,10 @@ class CreateMealPage extends Component {
 			youtube: "",
 			type: "",
 		});
-		alert("meal saved! :)");
+		this.successMessage();
+	};
+	successMessage = () => {
+		swal("Meal created and saved to your profile!");
 	};
 
 	render() {

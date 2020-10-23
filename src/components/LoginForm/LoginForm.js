@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import mapStoreToProps from "../../redux/mapStoreToProps";
+import FingerprintIcon from "@material-ui/icons/Fingerprint";
 
 class LoginForm extends Component {
 	state = {
@@ -68,9 +69,10 @@ class LoginForm extends Component {
 				<div>
 					<input className='btn' type='submit' name='submit' value='Log In' />
 				</div>
-				<div>
-					<input className='btn' type='submit' name='submit' value='Touch ID' />
-				</div>
+
+				<button className='btn'>
+					<FingerprintIcon fontSize='small'></FingerprintIcon> Touch ID
+				</button>
 			</form>
 		);
 	}

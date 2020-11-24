@@ -31,7 +31,9 @@ class VeggieListItem extends React.Component {
 					<ul className='ul'>
 						<li>
 							<img className='img' src={this.props.meal.image} />
-							<div>{this.props.meal.mealName}</div>
+
+							<div className='mealTitle'>{this.props.meal.mealName}</div>
+							<br />
 							<div> Calories per serving: {this.props.meal.calories}</div>
 							<div className='videoDiv'>
 								<a href={this.props.meal.youtube} target={"_blank"}>

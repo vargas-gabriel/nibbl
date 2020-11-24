@@ -22,3 +22,7 @@ ul {
 .saveButton {
 	background-color: #735dd6;
 }
+
+.mealTitle {
+	font-weight: bold;
+}

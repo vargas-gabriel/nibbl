@@ -113,3 +113,33 @@ checklist 10/22
 [x]conditional render nav bar
 [x] ask edan about rendering url
 []Look into using new router for ind meals dispatch 
+
+
+Hello, I am Gabriel from the tarjan cohort 
+
+One of the hobbies i picked up during quarantine was cooking. 
+I decided I wanted to be healthier and know what was in the food I was eating. 
+I found it therapeutic and a good form of self care.  
+However, I quickly learned that knowing what to make is almost always an issue for me. 
+There are few experiences more frustrating than staring at the contents of my fridge for ten minutes, 
+saying forget it, and before I know it I’m eating chipotle for the third time this week. 
+Which isn't ideal.
+So when it came time to do my solo project, 
+I figured, why not build an app that does all of that thinking for me? 
+And that’s exactly what I did. 
+I created a mobile app, that I named nibbl, which I will go ahead and log into now.
+
+So this is nibbl 
+
+ to create it, i used  javascript, react, redux, node, postrgreSQL and css.
+
+ one challenge I faced was my fear of regular CSS, but in the 
+end it was nice not to rely on a CSS library. 
+
+
+A few things I'd like to incorporate in the future is to use an api for the meals, 
+have an image upload feature for the user profiles,  and add 
+a feature where you get meal suggestions based on what you have in your fridge.
+
+I'd like to thank my instructor Edan, prime academy, and my tarjan cohortmates for all of their
+support

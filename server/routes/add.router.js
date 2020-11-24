@@ -30,7 +30,6 @@ router.post("/", (req, res) => {
   VALUES ($1, $2, $3, $4, $5, $6)
   RETURNING "id";`;
 
-	// FIRST QUERY MAKES MOVIE
 	pool
 		.query(insertMealQuery, [
 			req.body.mealName,

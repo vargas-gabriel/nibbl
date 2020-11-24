@@ -11,3 +11,8 @@
 .inputItem {
 	color: #735dd6;
 }
+
+.pageTitle {
+	font-weight: bold;
+	font-size: medium;
+}

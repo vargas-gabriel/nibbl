@@ -23,7 +23,7 @@ class SavedListItem extends React.Component {
 		window.location.reload();
 	};
 	likeMessage = () => {
-		console.log("mouse over like");
+		console.log("in function likeMessage");
 	};
 	disLikeMessage = () => {
 		console.log("mouse over dislike");

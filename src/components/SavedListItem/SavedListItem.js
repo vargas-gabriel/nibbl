@@ -26,7 +26,7 @@ class SavedListItem extends React.Component {
 		console.log("in function likeMessage");
 	};
 	disLikeMessage = () => {
-		console.log("mouse over dislike");
+		console.log("in function disLikeMessage");
 	};
 	disLike = () => {
 		console.log("disliked:", this.props.saved.MEAL_ID);

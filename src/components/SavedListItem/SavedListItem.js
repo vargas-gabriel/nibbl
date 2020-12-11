@@ -22,6 +22,7 @@ class SavedListItem extends React.Component {
 		});
 		window.location.reload();
 	};
+	//not used yet
 	likeMessage = () => {
 		console.log("in function likeMessage");
 	};

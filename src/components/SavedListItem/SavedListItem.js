@@ -26,6 +26,7 @@ class SavedListItem extends React.Component {
 	likeMessage = () => {
 		console.log("in function likeMessage");
 	};
+	//not used yet
 	disLikeMessage = () => {
 		console.log("in function disLikeMessage");
 	};

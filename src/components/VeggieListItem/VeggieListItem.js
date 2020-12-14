@@ -11,7 +11,7 @@ class VeggieListItem extends React.Component {
 		user: this.props.store.user.id,
 		meal: this.props.meal.id,
 	};
-	componentDidMount() {}
+	// componentDidMount() {}
 	saveMeal = () => {
 		console.log(this.props.store.user.id, "is saving:", this.props.meal.id);
 		this.setState({

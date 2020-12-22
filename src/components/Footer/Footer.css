@@ -1,5 +1,9 @@
 footer {
-  margin-top: 80px;
-  padding: 20px;
-  text-align: center;
+	margin-top: 80px;
+	padding: 20px;
+	text-align: center;
+}
+
+.logo {
+	margin-top: 50px;
 }
